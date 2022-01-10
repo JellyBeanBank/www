@@ -1,0 +1,165 @@
+.token{
+    display: inline-block;
+    position: relative;
+    bottom: -7%;
+    width: 50px;
+    height: 50px;
+}
+.token.small{
+    width: 35px;
+    height: 35px;
+}
+.token.large{
+    width: 75px;
+    height: 75px;
+}
+
+/*COIN*/
+.coin{
+    background-image: url('../media/coin.png');
+    background-repeat: no-repeat;
+    background-position: 0%;
+    background-size: cover;
+}
+
+.spin{
+    animation-name: FLIP-BOOK;
+    animation-duration: 500ms;
+    animation-timing-function: steps(10);
+}
+.spin.once{
+    animation-iteration-count: 4;
+}
+.spin.continuous{
+    animation-iteration-count: infinite;
+}
+@keyframes FLIP-BOOK {
+    from {
+        background-position: 0% 0%;
+    }
+    to {
+        background-position: 100% 0%;
+    }
+}
+
+/*TARGET*/
+.target{
+    text-align: center;
+    /*font-size: 3vw;*/
+    padding: 1vw;
+
+    grid-area: lightningBoard;
+    display: block;
+    background-color: #F0F0F1;
+    border-radius: 15px;
+
+    position: absolute;
+    top: 75px;
+
+    animation-timing-function: ease-in !important;
+    /*left: 25%;*/
+}
+@keyframes target{
+    from {top: 75px;}
+    to{top:50vh;}
+}
+@-moz-keyframes target{
+    from {top: 75px;}
+    to{top:50vh;}
+}
+@-webkit-keyframes target{
+    from {top: 75px;}
+    to{top:50vh;}
+}
+
+.target.speed5{
+    animation:target 5s;
+    -moz-animation:target 5s; /* Firefox */
+    -webkit-animation:target 5s; /* Safari and Chrome */
+}
+
+.target.speed6{
+    animation:target 6s;
+    -moz-animation:target 6s; /* Firefox */
+    -webkit-animation:target 6s; /* Safari and Chrome */
+}
+
+.target.speed7{
+    animation:target 7s;
+    -moz-animation:target 7s; /* Firefox */
+    -webkit-animation:target 7s; /* Safari and Chrome */
+}
+
+.target.speed8{
+    animation:target 8s;
+    -moz-animation:target 8s; /* Firefox */
+    -webkit-animation:target 8s; /* Safari and Chrome */
+}
+
+.target.speed9{
+    animation:target 9s;
+    -moz-animation:target 9s; /* Firefox */
+    -webkit-animation:target 9s; /* Safari and Chrome */
+}
+
+.target.speed10{
+    animation:target 10s;
+    -moz-animation:target 10s; /* Firefox */
+    -webkit-animation:target 10s; /* Safari and Chrome */
+}
+
+.target.speed11{
+    animation:target 11s;
+    -moz-animation:target 11s; /* Firefox */
+    -webkit-animation:target 11s; /* Safari and Chrome */
+}
+
+.target.speed12{
+    animation:target 12s;
+    -moz-animation:target 12s; /* Firefox */
+    -webkit-animation:target 12s; /* Safari and Chrome */
+}
+
+.target.speed13{
+    animation:target 13s;
+    -moz-animation:target 13s; /* Firefox */
+    -webkit-animation:target 13s; /* Safari and Chrome */
+}
+
+.target.speed14{
+    animation:target 14s;
+    -moz-animation:target 14s; /* Firefox */
+    -webkit-animation:target 14s; /* Safari and Chrome */
+}
+
+.target.speed15{
+    animation:target 15s;
+    -moz-animation:target 15s; /* Firefox */
+    -webkit-animation:target 15s; /* Safari and Chrome */
+}
+
+.target.speed30{
+    animation:target 30s;
+    -moz-animation:target 30s; /* Firefox */
+    -webkit-animation:target 30s; /* Safari and Chrome */
+}
+
+/*https://www.makeuseof.com/css-background-gradients/*/
+/*.target.c0{*/
+/*    background-image: linear-gradient( 95.2deg, rgba(173,252,234,1) 26.8%, rgba(192,229,246,1) 64% );*/
+/*}*/
+/*.target.c1{*/
+/*    background-image: linear-gradient( 109.6deg, rgba(156,252,248,1) 11.2%, rgba(110,123,251,1));*/
+/*}*/
+/*.target.c2{*/
+/*    background-image: linear-gradient(to right, #ff6e7f, #bfe9ff);*/
+/*}*/
+/*.target.c3{*/
+/*    background-image: linear-gradient(to right, #0099f7, #f11712);*/
+/*}*/
+/*.target.c4{*/
+/*    background-image: linear-gradient(to right, #2c3e50, #4ca1af);*/
+/*}*/
+/*.target.c5{*/
+/*    background-image: linear-gradient(to right, #ff9966, #ff5e62);*/
+/*}*/
