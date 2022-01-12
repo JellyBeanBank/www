@@ -75,7 +75,7 @@
     min-content
     1fr
     min-content
-    / 0.7fr 0.3fr;
+    / 1fr min-content;
 }
 
 #inputs > *:last-child sof-text-html,
