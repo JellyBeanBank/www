@@ -56,7 +56,7 @@
 }
 
 #inputs sof-abacus-output,
-#inputs sof-number-pad-output{
+#inputs sof-text-html{
     font-size: 3em;
     text-align: center;
 
@@ -65,14 +65,20 @@
 
 #inputs > *:last-child{
     display: grid;
+
     grid-template-areas:
-    "output"
-    "numberPad"
-    "button";
+    "output output"
+    "numberPad numberPad"
+    "button qr";
 
     grid-template:
     min-content
     1fr
     min-content
-    / 1fr;
+    / 0.7fr 0.3fr;
+}
+
+#inputs > *:last-child sof-text-html,
+#inputs > *:last-child sof-number-pad{
+    grid-column: 1 / span 2;
 }
