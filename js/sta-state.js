@@ -14,7 +14,7 @@ stateTagApp['state'] = {
     targets: {},
     level: 1,
     levels: [
-        {/* ZERO HACK*/},
+        {/* ZERO HACK */},
         {obfuscate: false, targets: 1, range: {min: 1, max: 10 - 1}},
         {obfuscate: false, targets: 1, range: {min: 10, max: 100 - 1}},
         {obfuscate: false, targets: 1, range: {min: 100, max: 100000 - 1}},
