@@ -3,7 +3,6 @@ document.addEventListener("DOMContentLoaded", function () {
     initCanvas();
     initSparkles();
 
-    stateTagApp.$write('pause', false);
 
     initGameLoop();
 });

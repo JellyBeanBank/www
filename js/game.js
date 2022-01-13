@@ -339,4 +339,11 @@ function initGameLoop(){
         }
     }, 1000);
 
+    stateTagApp.$write('pause', true);
+    stateTagApp.$write('timer', 0);
+    stateTagApp.$write('targets', {});
+    setTimeout(function (){
+        stateTagApp.$write('pause', false);
+    }, 500);
+
 }

@@ -24,7 +24,7 @@ const stateTagApp = {
     },
 
     nebula: {
-        production: "https://gun-manhattan.herokuapp.com",
-        development: "http://gun-manhattan.herokuapp.com"
+        production: "https://json-data.io:8080",
+        development: "http://json-data.io:8181"
     }
 }
