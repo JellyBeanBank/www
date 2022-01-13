@@ -72,7 +72,7 @@
     <sof-number-pad service="nebula" locus="numberPad"></sof-number-pad>
     <button
             id="fireButton"
-            onclick="stateTagApp.commands.fire()">
+            onclick="stateTagApp.$nebula('remoteCommand', 'fire')">
         <i data-feather="cpu"></i>
     </button>
 </div>

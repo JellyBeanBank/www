@@ -31,6 +31,7 @@
     <link rel=preload href=/js/feather.min.js as=script>
 
     <link rel=stylesheet href=/css/custom.css>
+    <link rel=stylesheet href=/css/html.css>
 
     <script src="/js/sta-config.js"></script>
     <script src="/js/sta-state.js"></script>
@@ -38,8 +39,6 @@
     <script src="/js/sta-socket.js"></script>
     <script src="/js/sta-nebula.js"></script>
     <script src="/js/sta-io.js"></script>
-
-    <!--    game -->
 
     <!--  https://github.com/feathericons/feather#quick-start  -->
     <script src="/js/feather.min.js"></script>
@@ -70,7 +69,6 @@
 <!--<sof-input service="nebula" locus="testing"></sof-input>-->
 <!--<sof-text-html service="nebula" locus="testing"></sof-text-html>-->
 <div id="screen">
-    <sof-number-pad-link to='{"name":"NumberPad", "params": {"nebulaId": }}'></sof-number-pad-link>
     <sof-number-pad service="nebula" locus="numberPad"></sof-number-pad>
     <button
             id="fireButton"
@@ -81,5 +79,6 @@
 <script>
     feather.replace();
 </script>
+<script src=/js/html.js></script>
 </body>
 </html>

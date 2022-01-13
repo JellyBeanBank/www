@@ -5,11 +5,13 @@ function initGlobalNebulaWatchers(uuidv4, _) {
         stateTagApp.$write('sta.nebulaId', nebulaId);
     }
 
-    stateTagApp.$onNebula('remoteCommand', function (value){
-        if(!_.isUndefined(stateTagApp.commands[value])){
-            stateTagApp.commands[value]();
-            stateTagApp.$nebula(key, null);
-            stateTagApp.log(value.concat(' executed and deleted.'))
+    stateTagApp.$onNebula('remoteCommand', function (command){
+
+        if(!_.isEmpty(command)
+            && !_.isUndefined(stateTagApp.commands[command])){
+            stateTagApp.commands[command]();
+            stateTagApp.$nebula('remoteCommand', '');
+            stateTagApp.log(command.concat(' executed and deleted.'))
         }
     });
 }

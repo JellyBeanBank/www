@@ -318,22 +318,25 @@ function newGame(staMessage) {
 }
 
 //tick game loop
-setInterval(() => {
-    let paused = stateTagApp.$read('pause');
-    let timer = stateTagApp.$read('timer');
-    let targets = stateTagApp.$read('targets');
+function initGameLoop(){
+    setInterval(() => {
+        let paused = stateTagApp.$read('pause');
+        let timer = stateTagApp.$read('timer');
+        let targets = stateTagApp.$read('targets');
 
-    if (!paused && timer) {
-        timer--;
-        stateTagApp.$write('timer', timer - 1);
+        if (!paused && timer) {
+            timer--;
+            stateTagApp.$write('timer', timer - 1);
 
-        if (!timer) {
-            stateTagApp.$write('paused', true);
-            return;
+            if (!timer) {
+                stateTagApp.$write('paused', true);
+                return;
+            }
+
+            if (_.isEmpty(targets)) {
+                queNumbers();
+            }
         }
+    }, 1000);
 
-        if (_.isEmpty(targets)) {
-            queNumbers();
-        }
-    }
-}, 1000);
+}

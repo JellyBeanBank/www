@@ -1,6 +1,6 @@
 const stateTagApp = {
     namespace: 'sof',
-    disk: [localStorage, sessionStorage][0],
+    disk: ['blackhole', localStorage, sessionStorage][0],
     cacheTimeout: 1 * 60 * 1000,
     log: console.log,
     format: {
@@ -8,9 +8,9 @@ const stateTagApp = {
     },
 
     base: window.location.protocol
-        .concat('://')
+        .concat('//')
         .concat(window.location.host)
-        .concat('/#/'),
+    ,
 
     api: {
         production: "https://data.StateTagApps.com",
@@ -20,7 +20,7 @@ const stateTagApp = {
     //optional
     socket: {
         production: "https://timesocket.io:3030",
-        development: "https://timesocket.io:3030"
+        development: "http://timesocket.io:3131"
     },
 
     nebula: {
