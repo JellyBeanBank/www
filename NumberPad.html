@@ -52,24 +52,34 @@
 
     <style>
         .screen {
-            display: grid;
             grid-template-areas:
-                    "numberPad"
-                    "button";
+                "output"
+                "numberPad"
+                "button";
 
             grid-template:
-                    1fr
-                    min-content
-                    / 1fr;
+                min-content
+                1fr
+                min-content
+                / 1fr;
         }
     </style>
 
 </head>
 <body>
-<!--<sof-input service="nebula" locus="testing"></sof-input>-->
-<!--<sof-text-html service="nebula" locus="testing"></sof-text-html>-->
+
 <div id="screen">
-    <sof-number-pad service="nebula" locus="numberPad"></sof-number-pad>
+    <sof-text-html
+        is-html=true
+        service="nebula"
+        locus="numberpad"
+        fallback="0"
+        filters='[{"name": "obfuscate"}, {"name": "bullet"}]'></sof-text-html>
+
+    <sof-number-pad
+            service="nebula"
+            locus="numberpad"></sof-number-pad>
+
     <button
             id="fireButton"
             onclick="stateTagApp.$nebula('remoteCommand', 'fire')">

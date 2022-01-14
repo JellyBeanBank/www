@@ -109,7 +109,8 @@ stateTagApp["commands"] = {
 
     fire: function (number) {
 
-        number = number || stateTagApp.$read('numberPad') * 1;
+        number = number || stateTagApp.$read('sta.numberpad') * 1 || 0;
+
         let numbers = this.findNumbersForNumber(number);
         let uuids = this.findUuidsForNumbers(numbers);
 

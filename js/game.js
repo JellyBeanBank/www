@@ -120,7 +120,7 @@ function abortWeapon(partialBroadcastable) {
 
 function fireWeapon(staMessage) {
     let leftInput = stateTagApp.storage.getters.tally();
-    let rightInput = stateTagApp.$read('numberPad') * 1;
+    let rightInput = stateTagApp.$read('sta.numberpad') * 1 || 0;
 
     if (leftInput != rightInput) {
         abortWeapon({

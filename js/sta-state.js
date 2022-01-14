@@ -34,8 +34,6 @@ stateTagApp['state'] = {
         lower: []
     },
 
-    numberPad: '',
-
     prefs: {
         abacus: {
             upperRod: [0],
