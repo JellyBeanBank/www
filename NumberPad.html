@@ -51,10 +51,9 @@
     <!-- end: Dev -->
 
     <style>
-
         #screen {
             display: grid;
-            height: 100vh;
+            height: calc(100vh - 85px);
 
             grid-template-areas:
                 "output"
@@ -70,9 +69,13 @@
 
         sof-text-html{
             font-size: 3em;
+            line-height: 3.5em;
             text-align: center;
 
             color: #999999;
+        }
+        #fireButton{
+            line-height: 80px;
         }
     </style>
 
