@@ -51,7 +51,9 @@
     <!-- end: Dev -->
 
     <style>
-        .screen {
+        #screen {
+            display: grid;
+
             grid-template-areas:
                 "output"
                 "numberPad"
@@ -63,6 +65,13 @@
                 min-content
                 / 1fr;
         }
+
+        sof-text-html{
+            font-size: 3em;
+            text-align: center;
+
+            color: #999999;
+        }
     </style>
 
 </head>
@@ -70,11 +79,10 @@
 
 <div id="screen">
     <sof-text-html
-        is-html=true
-        service="nebula"
-        locus="numberpad"
-        fallback="0"
-        filters='[{"name": "obfuscate"}, {"name": "bullet"}]'></sof-text-html>
+            service="nebula"
+            locus="numberpad"
+            fallback="0"
+            filters='[{"name": "obfuscate"}, {"name": "bullet"}]'></sof-text-html>
 
     <sof-number-pad
             service="nebula"
