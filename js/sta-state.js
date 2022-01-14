@@ -6,7 +6,7 @@ stateTagApp['state'] = {
     bank: 0,
 
     speed: 30, //seconds min: 5
-    duration: 1, //minutes min: 1
+    duration: 5, //minutes min: 1
     pause: true,
     timer: 0,
     events: null,
