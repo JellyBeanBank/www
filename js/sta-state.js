@@ -16,8 +16,8 @@ stateTagApp['state'] = {
         {/* ZERO HACK */},
         {speed: 10, obfuscate: false, targets: 1, range: {min: 1, max: 10 - 1}},
         {speed: 15, obfuscate: false, targets: 1, range: {min: 10, max: 100 - 1}},
-        {speed: 30, obfuscate: false, targets: 2, range: {min: 1,  max: 10 - 1}},
-        {speed: 30, obfuscate: false, targets: 3, range: {min: 1,  max: 10 - 1}},
+        {speed: 30, obfuscate: true, targets: 2, range: {min: 1,  max: 10 - 1}},
+        {speed: 30, obfuscate: true, targets: 3, range: {min: 1,  max: 10 - 1}},
 
         {speed: 30, obfuscate: true, targets: 1, range: {min: 1, max: 10 - 1}},
         {speed: 30, obfuscate: true, targets: 1, range: {min: 10, max: 100 - 1}},
