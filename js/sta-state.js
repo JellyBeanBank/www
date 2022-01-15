@@ -5,7 +5,6 @@ stateTagApp['state'] = {
     coins: 0,
     bank: 0,
 
-    speed: 30, //seconds min: 5
     duration: 5, //minutes min: 1
     pause: true,
     timer: 0,
@@ -15,17 +14,17 @@ stateTagApp['state'] = {
     level: 1,
     levels: [
         {/* ZERO HACK */},
-        {obfuscate: false, targets: 1, range: {min: 1, max: 10 - 1}},
-        {obfuscate: false, targets: 1, range: {min: 10, max: 100 - 1}},
-        {obfuscate: false, targets: 2, range: {min: 100,  max: 10 - 1}},
+        {speed: 10, obfuscate: false, targets: 1, range: {min: 1, max: 10 - 1}},
+        {speed: 15, obfuscate: false, targets: 1, range: {min: 10, max: 100 - 1}},
+        {speed: 30, obfuscate: false, targets: 2, range: {min: 1,  max: 10 - 1}},
+        {speed: 30, obfuscate: false, targets: 3, range: {min: 1,  max: 10 - 1}},
 
-        {obfuscate: true, targets: 1, range: {min: 1, max: 10 - 1}},
-        {obfuscate: true, targets: 1, range: {min: 10, max: 100 - 1}},
-        {obfuscate: true, targets: 1, range: {min: 100, max: 100000 - 1}},
-
-        {obfuscate: true, targets: 2, range: {min: 1, max: 10 - 1}},
-        {obfuscate: true, targets: 2, range: {min: 10, max: 100 - 1}},
-        {obfuscate: true, targets: 2, range: {min: 100, max: 100000 - 1}},
+        {speed: 30, obfuscate: true, targets: 1, range: {min: 1, max: 10 - 1}},
+        {speed: 30, obfuscate: true, targets: 1, range: {min: 10, max: 100 - 1}},
+        {speed: 30, obfuscate: true, targets: 1, range: {min: 100, max: 100000 - 1}},
+        {speed: 30, obfuscate: true, targets: 2, range: {min: 1, max: 10 - 1}},
+        {speed: 30, obfuscate: true, targets: 2, range: {min: 10, max: 100 - 1}},
+        {speed: 30, obfuscate: true, targets: 2, range: {min: 100, max: 100000 - 1}},
     ],
 
     abacus: {

@@ -181,7 +181,9 @@ function fireWeapon(staMessage) {
 
 function launchNumber(number) {
     let uuid = stateTagApp.uuid();
-    let speed = stateTagApp.$read('speed');
+    let level = stateTagApp.commands.getLevel();
+    let speed = level.speed;
+
     let size = ''.concat(number).length;
     size = ''.concat(size)
         .concat('.')

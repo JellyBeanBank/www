@@ -25,6 +25,6 @@ const stateTagApp = {
 
     nebula: {
         production: "https://json-data.io:8080",
-        development: "http://localhost:8000"
+        development: "http://json-data.io:8181"
     }
 }

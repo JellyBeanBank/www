@@ -82,3 +82,14 @@
 #inputs > *:last-child sof-number-pad{
     grid-column: 1 / span 2;
 }
+
+#version{
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    text-align: center;
+    font-size: 0.7em;
+
+    padding-left: 150px;
+    color: #999999;
+}
