@@ -42,7 +42,9 @@ stateTagApp["commands"] = {
     },
 
     reset: function () {
-        stateTagApp.$execute('resetApp')
+        let bank = stateTagApp.$read('bank');
+        stateTagApp.$execute('resetApp');
+        stateTagApp.$write('bank', bank);
     },
 
     recordMismatch: function (diff){

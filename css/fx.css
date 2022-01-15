@@ -61,15 +61,15 @@
 }
 @keyframes target{
     from {top: 75px;}
-    to{top:50vh;}
+    to{top:67vh;}
 }
 @-moz-keyframes target{
     from {top: 75px;}
-    to{top:50vh;}
+    to{top:67vh;}
 }
 @-webkit-keyframes target{
     from {top: 75px;}
-    to{top:50vh;}
+    to{top:67vh;}
 }
 
 .target.speed5{
