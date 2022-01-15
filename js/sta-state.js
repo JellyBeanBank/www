@@ -5,7 +5,7 @@ stateTagApp['state'] = {
     coins: 0,
     bank: 0,
 
-    duration: 5, //minutes min: 1
+    duration: 3, //minutes min: 1
     pause: true,
     timer: 0,
     events: null,
@@ -15,9 +15,13 @@ stateTagApp['state'] = {
     levels: [
         {/* ZERO HACK */},
         {speed: 10, obfuscate: false, targets: 1, range: {min: 1, max: 10 - 1}},
-        {speed: 15, obfuscate: false, targets: 1, range: {min: 10, max: 100 - 1}},
+        {speed: 20, obfuscate: false, targets: 1, range: {min: 10, max: 100 - 1}},
+
         {speed: 30, obfuscate: true, targets: 2, range: {min: 1,  max: 10 - 1}},
         {speed: 30, obfuscate: true, targets: 3, range: {min: 1,  max: 10 - 1}},
+
+        {speed: 30, obfuscate: true, targets: 2, range: {min: 10,  max: 100 - 1}},
+        {speed: 30, obfuscate: true, targets: 3, range: {min: 10,  max: 100 - 1}},
 
         {speed: 30, obfuscate: true, targets: 1, range: {min: 1, max: 10 - 1}},
         {speed: 30, obfuscate: true, targets: 1, range: {min: 10, max: 100 - 1}},

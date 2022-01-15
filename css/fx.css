@@ -78,64 +78,28 @@
     -webkit-animation:target 5s; /* Safari and Chrome */
 }
 
-.target.speed6{
-    animation:target 6s;
-    -moz-animation:target 6s; /* Firefox */
-    -webkit-animation:target 6s; /* Safari and Chrome */
-}
-
-.target.speed7{
-    animation:target 7s;
-    -moz-animation:target 7s; /* Firefox */
-    -webkit-animation:target 7s; /* Safari and Chrome */
-}
-
-.target.speed8{
-    animation:target 8s;
-    -moz-animation:target 8s; /* Firefox */
-    -webkit-animation:target 8s; /* Safari and Chrome */
-}
-
-.target.speed9{
-    animation:target 9s;
-    -moz-animation:target 9s; /* Firefox */
-    -webkit-animation:target 9s; /* Safari and Chrome */
-}
-
 .target.speed10{
     animation:target 10s;
     -moz-animation:target 10s; /* Firefox */
     -webkit-animation:target 10s; /* Safari and Chrome */
 }
 
-.target.speed11{
-    animation:target 11s;
-    -moz-animation:target 11s; /* Firefox */
-    -webkit-animation:target 11s; /* Safari and Chrome */
-}
-
-.target.speed12{
-    animation:target 12s;
-    -moz-animation:target 12s; /* Firefox */
-    -webkit-animation:target 12s; /* Safari and Chrome */
-}
-
-.target.speed13{
-    animation:target 13s;
-    -moz-animation:target 13s; /* Firefox */
-    -webkit-animation:target 13s; /* Safari and Chrome */
-}
-
-.target.speed14{
-    animation:target 14s;
-    -moz-animation:target 14s; /* Firefox */
-    -webkit-animation:target 14s; /* Safari and Chrome */
-}
-
 .target.speed15{
     animation:target 15s;
     -moz-animation:target 15s; /* Firefox */
     -webkit-animation:target 15s; /* Safari and Chrome */
+}
+
+.target.speed20{
+    animation:target 20s;
+    -moz-animation:target 20s; /* Firefox */
+    -webkit-animation:target 20s; /* Safari and Chrome */
+}
+
+.target.speed25{
+    animation:target 25s;
+    -moz-animation:target 25s; /* Firefox */
+    -webkit-animation:target 25s; /* Safari and Chrome */
 }
 
 .target.speed30{
