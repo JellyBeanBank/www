@@ -14,10 +14,51 @@ stateTagApp['state'] = {
     level: 1,
     levels: [
         {/* ZERO HACK */},
-        {speed: 10, obfuscate: false, targets: 1, range: {min: 1, max: 10 - 1}},
-        {speed: 20, obfuscate: false, targets: 1, range: {min: 10, max: 100 - 1}},
+        {
+            speed: 20,
+            obfuscate: false,
+            targets: 1,
+            range: {min: 250, max: 20000},
+            mutator: "Math.round(number / 50) * 50"
+        },
 
-        {speed: 30, obfuscate: true, targets: 2, range: {min: 1,  max: 10 - 1}},
+        {
+            speed: 30,
+            obfuscate: true,
+            targets: 2,
+            range: {min: 250, max: 20000},
+            mutator: "Math.round(number / 50) * 50"
+        },
+
+        {
+            speed: 30,
+            obfuscate: true,
+            targets: 3,
+            range: {min: 250, max: 20000},
+            mutator: "Math.round(number / 50) * 50"
+        },
+
+        /*{
+            speed: 20,
+            obfuscate: true,
+            targets: 4,
+            range: {min: 50, max: 2000},
+            mutator: "Math.round(number / 50) * 50"
+        },
+
+        {
+            speed: 30,
+            obfuscate: true,
+            targets: 5,
+            range: {min: 50, max: 2000},
+            mutator: "Math.round(number / 50) * 50"
+        },*/
+
+        /*{speed: 10, obfuscate: false, targets: 1, range: {min: 1, max: 10 - 1}},
+
+        {speed: 20, obfuscate: false, targets: 1, range: {min: 10, max: 100 - 1}},
+        {speed: 20, obfuscate: true, targets: 1, range: {min: 1, max: 100 - 1}},
+
         {speed: 30, obfuscate: true, targets: 3, range: {min: 1,  max: 10 - 1}},
 
         {speed: 30, obfuscate: true, targets: 2, range: {min: 10,  max: 100 - 1}},
@@ -26,9 +67,10 @@ stateTagApp['state'] = {
         {speed: 30, obfuscate: true, targets: 1, range: {min: 1, max: 10 - 1}},
         {speed: 30, obfuscate: true, targets: 1, range: {min: 10, max: 100 - 1}},
         {speed: 30, obfuscate: true, targets: 1, range: {min: 100, max: 100000 - 1}},
+
         {speed: 30, obfuscate: true, targets: 2, range: {min: 1, max: 10 - 1}},
         {speed: 30, obfuscate: true, targets: 2, range: {min: 10, max: 100 - 1}},
-        {speed: 30, obfuscate: true, targets: 2, range: {min: 100, max: 100000 - 1}},
+        {speed: 30, obfuscate: true, targets: 2, range: {min: 100, max: 100000 - 1}},*/
     ],
 
     abacus: {
@@ -71,7 +113,7 @@ function initGlobalStateWatchers(stateObserver) {
             return state.timer;
         },
         function (fresh, stale) {
-            if(stateTagApp.$read('coins') == 0){
+            if (stateTagApp.$read('coins') == 0) {
                 return;
             }
 
@@ -131,7 +173,7 @@ function initGlobalStateWatchers(stateObserver) {
             return state.coins;
         },
         function (fresh, stale) {
-            if(stateTagApp.$read('timer') == 0){
+            if (stateTagApp.$read('timer') == 0) {
                 return;
             }
 

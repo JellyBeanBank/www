@@ -3,13 +3,22 @@ stateTagApp["commands"] = {
         let coins = stateTagApp.$read('coins');
         let bank = stateTagApp.$read('bank');
         let level = stateTagApp.$read('level');
+        let levels = stateTagApp.$read('levels');
 
         bank += coins;
         level++;
 
         stateTagApp.$write('bank', bank);
         stateTagApp.$write('coins', 0);
-        stateTagApp.$write('level', level);
+
+        if(level < levels.length){
+            stateTagApp.$write('level', level);
+        }else{
+            stateTagApp.alert({
+                title: 'MISSION COMPLETE!',
+                html: '<p>Now you can tell Daddy what to change in the game!</p>'
+            })
+        }
     },
 
     showBank: function (){

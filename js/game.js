@@ -185,6 +185,7 @@ function launchNumber(number) {
     let speed = level.speed;
 
     let size = ''.concat(number).length;
+
     size = ''.concat(size)
         .concat('.')
         .concat(Math.round(number));
@@ -193,8 +194,8 @@ function launchNumber(number) {
     let color = Math.floor(Math.random() * 5)
     div.className = 'target c'.concat(color)
         .concat(' speed').concat(speed);
-    div.style.fontSize = ''.concat(size)
-        .concat('vw');
+
+    div.style.fontSize = ''.concat(size).concat('vw');
 
     let start = 5, end = 70;
     let position = Math.floor(Math.random() * (end - start) + start);
@@ -226,22 +227,76 @@ function launchNumber(number) {
 
 }
 
+function spreadOutTartets(speed) {
+    let targets = stateTagApp.$read('targets');
+    targets = Object.keys(targets);
+
+    var problems = [];
+
+    do {
+        let targetId = targets.pop();
+        let target = document.getElementById(targetId);
+
+        let rect1 = target.getBoundingClientRect();
+
+        let nudge = 0;
+        for (var sibling of targets) {
+            sibling = document.getElementById(sibling);
+            let rect2 = sibling.getBoundingClientRect();
+
+            var overlap = !(
+                rect1.right < rect2.left ||
+                rect1.left > rect2.right ||
+                rect1.bottom < rect2.top ||
+                rect1.top > rect2.bottom);
+
+            if(overlap){
+                target.classList.remove('speed'.concat(speed));
+                problems.push(targetId);
+            }
+        }
+    } while (targets.length);
+
+    var intervalId = setInterval(function (){
+        let targetId = problems.pop();
+        if(_.isUndefined(targetId)){
+            clearInterval(intervalId);
+            return;
+        }
+        let target = document.getElementById(targetId);
+        target.classList.add('speed'.concat(speed));
+    }.bind(speed), 3000);
+
+}
+
 function queNumbers() {
     let level = stateTagApp.commands.getLevel();
 
+    let duration = 250 * level.targets;
+
     do {
         let number = Math.round(Math.random() * (level.range.max - level.range.min) + level.range.min);
-        setTimeout(()=>{
-            launchNumber(number);
+        if (!_.isUndefined(level.mutator)) {
+            try {
+                eval("number = ".concat(level.mutator));
+            } catch (e) {
+            }
+        }
 
-        }, 200);
+        setTimeout(() => {
+            launchNumber(number);
+        }, 250 * level.targets);
     } while (--level.targets);
+
+    setTimeout(() => {
+        spreadOutTartets(level.speed);
+    }, duration + 250);
 }
 
-function removeTargets(staMessage){
+function removeTargets(staMessage) {
     let targets = stateTagApp.$read('targets');
 
-    for(let id in targets){
+    for (let id in targets) {
         let element = document.getElementById(id);
         element.remove();
         delete targets[id];
@@ -320,7 +375,7 @@ function newGame(staMessage) {
 }
 
 //tick game loop
-function initGameLoop(){
+function initGameLoop() {
     setInterval(() => {
         let paused = stateTagApp.$read('pause');
         let timer = stateTagApp.$read('timer');
@@ -344,7 +399,7 @@ function initGameLoop(){
     stateTagApp.$write('pause', true);
     stateTagApp.$write('timer', 0);
     stateTagApp.$write('targets', {});
-    setTimeout(function (){
+    setTimeout(function () {
         stateTagApp.$write('pause', false);
     }, 500);
 
