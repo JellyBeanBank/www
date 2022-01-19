@@ -5,7 +5,7 @@ stateTagApp['state'] = {
     coins: 0,
     bank: 0,
 
-    duration: 1, //minutes min: 1
+    duration: 15, //minutes min: 1
     pause: true,
     timer: 0,
     events: null,
