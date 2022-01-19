@@ -193,7 +193,7 @@ function launchNumber(number) {
     let div = document.createElement("div", "");
     let color = Math.floor(Math.random() * 5)
     div.className = 'target c'.concat(color)
-        .concat(' speed').concat(speed);
+        .concat(' speed')/*.concat(speed)*/;
 
     div.style.fontSize = ''.concat(size).concat('vw');
 

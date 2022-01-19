@@ -5,7 +5,7 @@ stateTagApp['state'] = {
     coins: 0,
     bank: 0,
 
-    duration: 3, //minutes min: 1
+    duration: 1, //minutes min: 1
     pause: true,
     timer: 0,
     events: null,
@@ -15,27 +15,49 @@ stateTagApp['state'] = {
     levels: [
         {/* ZERO HACK */},
         {
-            speed: 20,
+            speed: 60,
             obfuscate: false,
-            targets: 1,
-            range: {min: 250, max: 20000},
-            mutator: "Math.round(number / 50) * 50"
+            targets: 2,
+            range: {min: 5, max: 10-1},
         },
 
         {
-            speed: 30,
+            speed: 60,
             obfuscate: true,
             targets: 2,
-            range: {min: 250, max: 20000},
-            mutator: "Math.round(number / 50) * 50"
+            range: {min: 5, max: 100-1},
+
         },
 
         {
-            speed: 30,
+            speed: 60,
+            obfuscate: true,
+            targets: 2,
+            range: {min: 1, max: 1000 -1},
+
+        },
+
+        {
+            speed: 60,
+            obfuscate: false,
+            targets: 3,
+            range: {min: 5, max: 10-1},
+        },
+
+        {
+            speed: 60,
             obfuscate: true,
             targets: 3,
-            range: {min: 250, max: 20000},
-            mutator: "Math.round(number / 50) * 50"
+            range: {min: 5, max: 100-1},
+
+        },
+
+        {
+            speed: 60,
+            obfuscate: true,
+            targets: 3,
+            range: {min: 1, max: 1000 -1},
+
         },
 
         /*{
